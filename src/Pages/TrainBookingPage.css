@@ -1,0 +1,293 @@
+.booking-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin-top: 60px;
+}
+
+.booking-page h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
+
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.train-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  user-select: none;
+}
+
+.train-route {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4a56e2;
+}
+
+.train-details,
+.train-class-price {
+  display: flex;
+  gap: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+}
+
+.train-class-price {
+  justify-content: space-between;
+}
+
+.book-btn {
+  align-self: flex-start;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-color: #4a56e2;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  user-select: none;
+}
+
+.book-btn:hover {
+  background-color: #3b44c9;
+  box-shadow: 0 0 20px rgba(59, 68, 201, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .train-card {
+    padding: 20px;
+  }
+  .train-details,
+  .train-class-price {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+.booking-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.train-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  transition: box-shadow 0.3s ease;
+}
+
+.train-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.train-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.train-route {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2980b9;
+}
+
+.train-times {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.train-info {
+  display: flex;
+  gap: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.train-info span {
+  font-weight: 600;
+}
+/* .booking-page {
+  max-width: 900px;
+  margin: 30px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 0 15px;
+} */
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.train-card {
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.train-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.train-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.train-number {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1976d2; /* Blue color */
+  background: #e3f2fd;
+  padding: 6px 14px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+.train-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1976d2; /* your primary blue */
+  text-shadow: 0 1px 2px rgba(25, 118, 210, 0.3);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+
+
+.train-route {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+.train-times {
+  display: flex;
+  gap: 25px;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.train-times span {
+  background: #f1f3f4;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  min-width: 110px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.train-info {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  justify-content: space-between;
+}
+
+.train-info span {
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.03);
+}
+
+/* Optional: Book Now button if you want to add it later */
+
+.book-btn {
+  margin-top: 18px;
+  padding: 10px 18px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 350px;
+}
+
+.book-btn:hover {
+  background-color: #115293;
+}
+
+.no-trains-message {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

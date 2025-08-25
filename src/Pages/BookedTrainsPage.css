@@ -1,0 +1,282 @@
+.booked-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin-top: 60px;
+}
+
+.booked-page h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.no-bookings {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  user-select: none;
+}
+
+.booking-route {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4a56e2;
+}
+
+.booking-details,
+.booking-class-price {
+  display: flex;
+  gap: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+}
+
+.booking-class-price {
+  justify-content: space-between;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffc107; /* amber */
+  color: #222;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+  box-shadow: 0 0 12px rgba(224, 168, 0, 0.7);
+}
+
+.delete-btn {
+  background-color: #dc3545; /* red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+  box-shadow: 0 0 12px rgba(176, 42, 55, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .booking-card {
+    padding: 20px;
+  }
+  .booking-details,
+  .booking-class-price {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .booking-actions {
+    flex-direction: column;
+  }
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+.booked-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.booked-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.booking-card {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.booking-card strong {
+  color: #444;
+}
+
+.booking-card input[type="date"] {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.update-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  .booking-card {
+    padding: 12px;
+  }
+
+  .update-btn, .delete-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+/* Date input styling */
+.booking-card input[type="date"] {
+  padding: 8px 10px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 200px;
+  color: #000000;
+}
+
+.booking-card input[type="date"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Update button styling */
+.update-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.update-btn:hover {
+  background-color: #218838;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  /* margin-left: -300px;
+  margin-right: -300px; */
+}
+
+@media (max-width: 900px) {
+  .booking-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-list {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
+}

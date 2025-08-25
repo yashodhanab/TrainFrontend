@@ -1,0 +1,87 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://www.mmonthego.com/wp-content/uploads/2023/05/Train-journeys-Sri-Lanka.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-box {
+  background: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+  border-radius: 30px;
+  padding: 40px 60px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero-box h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.8rem;
+  color: #222;
+}
+
+.hero-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.train-search-container{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  /* background-image: url('D:\Git\TrainBook\train-seat-booking\src\assets\Train-journeys-Sri-Lanka.jpg'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.hero-box {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.5); /* 30% transparent white */
+  /* text-shadow: 0 0 6px rgba(0,0,0,0.7); */
+}
+
+.hero-box h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.hero-box p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.train-search-container {
+  margin-top: 1auto;
+  margin-bottom: auto;
+  /* margin-top: auto;
+margin-bottom: 10px; */
+
+}
