@@ -5,6 +5,7 @@ import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
 import TrainBookingPage from "./Pages/TrainBookingPage";
 import BookedTrainsPage from "./Pages/BookedTrainsPage";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/available-trains" element={<TrainBookingPage />} />
         <Route path="/my-bookings" element={<BookedTrainsPage />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </>
   );
