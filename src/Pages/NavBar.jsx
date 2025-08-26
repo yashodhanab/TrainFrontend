@@ -1,26 +1,9 @@
-// import "./NavBar.css";
 
-// export default function Navbar() {
-//   return (
-//     <nav className="navbar">
-//       <div className="logo">🚆 TrainBook</div>
-//       <div className="nav-links">
-//         <a href="#bookings">Bookings</a>
-//         <a href="#trains">Trains</a>
-//         <a href="#about">About Us</a>
-//       </div>
-//       <div className="auth-buttons">
-//         <button className="btn signup">Sign Up</button>
-//         <button className="btn signin">Sign In</button>
-//       </div>
-//     </nav>
-//   );
-// }
 
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./NavBar.css";
-import trainIcon from '../assets/train.png'; // adjust path to your icon
+import trainIcon from '../assets/train.png'; 
 
 
 export default function Navbar() {
@@ -28,15 +11,15 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if userId exists in localStorage
+
     const userId = localStorage.getItem("userId");
-    setLoggedIn(!!userId); // true if userId exists, else false
+    setLoggedIn(!!userId); 
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("userId"); // Clear login info
+    localStorage.removeItem("userId");
     setLoggedIn(false);
-    navigate("/login"); // Redirect to login page or wherever you want
+    navigate("/login"); 
 
   };
 

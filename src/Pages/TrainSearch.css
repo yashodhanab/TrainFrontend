@@ -14,8 +14,8 @@
 
 .train-search-form input,
 .train-search-form select {
-  background-color: #e0f0ff; /* light blue background, change as you like */
-  color: #000000; /* keep text dark for contrast */
+  background-color: #e0f0ff;
+  color: #000000;
   border: 1.6px solid #bbb;
   border-radius: 5px;
   padding: 14px 18px;
