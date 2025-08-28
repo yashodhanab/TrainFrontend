@@ -119,6 +119,7 @@ export default function Login() {
             <div className="input-group">
               <input
                 type="email"
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder=" "
@@ -130,6 +131,7 @@ export default function Login() {
             <div className="input-group">
               <input
                 type="password"
+                name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder=" "

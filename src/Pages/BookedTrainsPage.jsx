@@ -25,27 +25,51 @@ export default function BookedTrainsPage() {
     fetchBookings();
   }, []);
 
+  // const handleDelete = async (id) => {
+  //   if (window.confirm("Are you sure you want to delete this booking?")) {
+  //     try {
+  //       const res = await fetch(`https://train-book-backend.vercel.app/api/bookings/${id}`, {
+  //         method: "DELETE",
+  //       });
+
+  //       if (!res.ok) {
+  //         const errorData = await res.json();
+  //         alert(`Failed to delete booking: ${errorData.message || "Unknown error"}`);
+  //         return;
+  //       }
+
+  //       setBookings(bookings.filter((b) => b.bookingid !== id));
+  //       alert(`Delete Successful`);
+  //     } catch (error) {
+  //       console.error("Delete error:", error);
+  //       alert("Failed to delete booking due to network/server error");
+  //     }
+  //   }
+  // };
+
   const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this booking?")) {
-      try {
-        const res = await fetch(`https://train-book-backend.vercel.app/api/bookings/${id}`, {
-          method: "DELETE",
-        });
-
-        if (!res.ok) {
-          const errorData = await res.json();
-          alert(`Failed to delete booking: ${errorData.message || "Unknown error"}`);
-          return;
-        }
-
-        setBookings(bookings.filter((b) => b.bookingid !== id));
-        alert(`Delete Successful`);
-      } catch (error) {
-        console.error("Delete error:", error);
-        alert("Failed to delete booking due to network/server error");
+  if (window.confirm("Are you sure you want to delete this booking?")) {
+    try {
+      const res = await fetch(`https://train-book-backend.vercel.app/api/bookings/${id}`, {
+        method: "DELETE",
+      });
+      if (!res.ok) {
+        const errorData = await res.json();
+        alert(`Failed to delete booking: ${errorData.message || "Unknown error"}`);
+        return;
       }
+
+      setBookings(bookings.filter((b) => b.bookingid !== id));
+
+      // Remove this alert, since it causes Selenium to fail
+      // alert(`Delete Successful`);
+    } catch (error) {
+      console.error("Delete error:", error);
+      alert("Failed to delete booking due to network/server error");
     }
-  };
+  }
+};
+
 
   const handleUpdate = async (id) => {
     const newDueDate = editDueDates[id];
