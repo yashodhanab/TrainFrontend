@@ -61,6 +61,10 @@ export default function BookedTrainsPage() {
         body: JSON.stringify({ duedate: newDueDate }),
       });
 
+
+      console.log("Update response:", res);
+      console.log("Update response status:", JSON.stringify({ duedate: newDueDate }));
+
       if (!res.ok) {
         const errorData = await res.json();
         alert(`Failed to update due date: ${errorData.message || "Unknown error"}`);
