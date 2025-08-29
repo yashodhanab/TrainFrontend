@@ -1,6 +1,8 @@
 const { Builder, By, until } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
 const readline = require("readline");
 
+// Wait for user input
 function waitForEnter() {
   return new Promise(resolve => {
     const rl = readline.createInterface({
@@ -15,7 +17,15 @@ function waitForEnter() {
 }
 
 (async function manualDeleteBookedTrainTest() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  // Chrome options for headless mode
+  let options = new chrome.Options();
+  options.addArguments("--headless=new"); // headless mode
+  options.addArguments("--no-sandbox");   // required for CI environments
+  options.addArguments("--disable-dev-shm-usage");
+  options.addArguments("--disable-gpu");
+  options.addArguments("--window-size=1920,1080");
+
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(options).build();
 
   try {
     // 1️⃣ Login
@@ -33,7 +43,7 @@ function waitForEnter() {
     // Wait until at least one booking card is visible
     await driver.wait(until.elementLocated(By.css(".booking-card")), 10000);
 
-    console.log("✅ Booked trains page loaded. You can now manually delete a booking.");
+    console.log("✅ Booked trains page loaded in headless mode. You can now manually delete a booking.");
 
     // 3️⃣ Wait for manual action
     await waitForEnter();
@@ -46,14 +56,3 @@ function waitForEnter() {
     await driver.quit();
   }
 })();
-
-
-//to run this test , ensure you have selenium-webdriver installed and a ChromeDriver available in your PATH.
-// You can install selenium-webdriver via npm: 
-// npm install selenium-webdriver 
-// Make sure your frontend is running at http://localhost:5173 and you have a user with bookings to test.
-// This test requires manual intervention to delete a booking, as automating deletion without confirmation is not feasible.
-// After deleting a booking manually, press ENTER in the terminal to complete the test.
-
-// Then run this script with Node.js:
-// node deleteBooking.test.cjs

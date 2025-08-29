@@ -11,22 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout code
       - uses: actions/checkout@v3
 
+      # 2️⃣ Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # 4️⃣ Build frontend
       - name: Build frontend
         run: npm run build
 
+      # 5️⃣ Run unit tests
       - name: Run unit tests
         run: npm test -- --watchAll=false
 
-      # Optional: run automation tests
+      # 6️⃣ Set up Chrome for Selenium
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      # 7️⃣ Run Selenium tests (headless mode)
       - name: Run Selenium tests
-        run: node src/tests/deleteBooking.test.cjs
+        run: |
+          export DISPLAY=:99
+          node src/tests/deleteBooking.test.cjs
