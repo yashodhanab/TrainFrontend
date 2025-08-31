@@ -1,0 +1,51 @@
+name: TrainBook Frontend CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout code
+    - uses: actions/checkout@v3
+
+    # 2. Setup Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    # 3. Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # 4. Run tests and generate JUnit report
+    - name: Run tests
+      run: |
+        mkdir -p test-results
+        npm test -- --reporter mocha-junit-reporter --reporter-options mochaFile=test-results/results.xml
+
+    # 5. Generate coverage report (optional)
+    - name: Generate coverage
+      run: |
+        mkdir -p coverage
+        npm run test -- --coverage --coverageReporters=text-lcov
+
+    # 6. Upload test results
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-test-results
+        path: test-results/
+
+    # 7. Upload coverage report
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-coverage
+        path: coverage/
